@@ -1,0 +1,113 @@
+کلاس انتزاعی (Abstract class)
+کلاس انتزاعی کلاسی است که نمی توان از ان نموونه سازی کرد و معمولا شامل متد های انتزاعی است که باید در کلاس های فرزند پیاده سازی شود
+
+abstract Class Animal
+{
+  public abstract void MakeSound();
+}
+Class Dog : Animal
+{
+    public override void MakeSound()
+    {
+        Consol.WriteLine("Woof!");
+    }
+ }   
+ ----------------------------------------------------------------------------------
+(Sealed Class) کلاس مهر موم شده
+کلاس مهرموم شده کلاسی است که نمی توتن از ان ارث بری کرد
+
+sealed class FinalClass
+{
+    public void Display()
+    {
+        Console.WriteLine("This is a sealed class.");
+    }
+}
+----------------------------------------------------------------------------------
+(Partial Class) کلاس جزءی
+کلاسی که به شما اجازه می دهد تا تعریف یک کلاس را در چندین فایل جداگانه تقسیم کنید
+
+// File1.cs
+
+public partial class MyClass
+{
+    public void Method1()
+    {
+        Console.WriteLine("Method1");
+    }
+}
+
+// File2.cs
+
+public partial class MyClass
+{
+    public void Method2()
+    {
+        Console.WriteLine("Method2");
+    }
+}
+-------------------------------------------------------------------------------------
+(Polymorphism) چندریختی
+چندریختی به توانایی یک متد برای انجام کار های مختلف بر اساس نوع شیء اشاره دارد
+
+class Animal
+{
+    public virtual void MakeSound()
+    {
+        Console.WriteLine("Some sound");
+    }
+}
+
+class Dog : Animal
+{
+    public override void MakeSound()
+    {
+        Console.WriteLine("Woof!");
+    }
+}
+
+class Cat : Animal
+{
+    public override void MakeSound()
+    {
+        Console.WriteLine("Meow!");
+    }
+}
+
+Animal myDog = new Dog();
+Animal myCat = new Cat();
+myDog.MakeSound(); // Output: Woof!
+myCat.MakeSound(); // Output: Meow!
+
+---------------------------------------------------------------------------------------
+(Overridding) بازنویسی
+بازنویسی به معنای تغییر رفتار یک متد ارث بری در کلاس فرزند است
+
+class BaseClass
+{
+    public virtual void Display()
+    {
+        Console.WriteLine("Base class display");
+    }
+}
+
+class DerivedClass : BaseClass
+{
+    public override void Display()
+    {
+        Console.WriteLine("Derived class display");
+    }
+}
+
+BaseClass obj = new DerivedClass();
+obj.Display(); // Output: Derived class display
+
+-----------------------------------------------------------------------------------------
+(Array)ارایه
+ارایه مجموعه ای از عناصر هم نوع است که با استفاده از اندیس ها به انها دسترسی پیدا می کنیم
+
+int[] numbers = { 1, 2, 3, 4, 5 };
+for (int i = 0; i < numbers.Length; i++)
+{
+    Console.WriteLine(numbers[i]);
+}
