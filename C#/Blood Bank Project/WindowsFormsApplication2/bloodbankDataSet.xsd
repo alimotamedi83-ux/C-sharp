@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="bloodbankDataSet" targetNamespace="http://tempuri.org/bloodbankDataSet.xsd" xmlns:mstns="http://tempuri.org/bloodbankDataSet.xsd" xmlns="http://tempuri.org/bloodbankDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="bloodbankConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="bloodbankConnectionString (Settings)" PropertyReference="ApplicationSettings.WindowsFormsApplication2.Properties.Settings.GlobalReference.Default.bloodbankConnectionString" Provider="System.Data.OleDb" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="listTableAdapter" GeneratorDataComponentClassName="listTableAdapter" Name="list" UserDataComponentName="listTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="bloodbankConnectionString (Settings)" DbObjectName="list" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT fname, lname, phon, type FROM list</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="fname" DataSetColumn="fname" />
+              <Mapping SourceColumn="lname" DataSetColumn="lname" />
+              <Mapping SourceColumn="phon" DataSetColumn="phon" />
+              <Mapping SourceColumn="type" DataSetColumn="type" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="bloodbankDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_UserDSName="bloodbankDataSet" msprop:Generator_DataSetName="bloodbankDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="list" msprop:Generator_RowEvHandlerName="listRowChangeEventHandler" msprop:Generator_RowDeletedName="listRowDeleted" msprop:Generator_RowDeletingName="listRowDeleting" msprop:Generator_RowEvArgName="listRowChangeEvent" msprop:Generator_TablePropName="list" msprop:Generator_RowChangedName="listRowChanged" msprop:Generator_RowChangingName="listRowChanging" msprop:Generator_TableClassName="listDataTable" msprop:Generator_RowClassName="listRow" msprop:Generator_TableVarName="tablelist" msprop:Generator_UserTableName="list">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="fname" msprop:Generator_ColumnPropNameInRow="fname" msprop:Generator_ColumnPropNameInTable="fnameColumn" msprop:Generator_ColumnVarNameInTable="columnfname" msprop:Generator_UserColumnName="fname" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="lname" msprop:Generator_ColumnPropNameInRow="lname" msprop:Generator_ColumnPropNameInTable="lnameColumn" msprop:Generator_ColumnVarNameInTable="columnlname" msprop:Generator_UserColumnName="lname" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="phon" msprop:Generator_ColumnPropNameInRow="phon" msprop:Generator_ColumnPropNameInTable="phonColumn" msprop:Generator_ColumnVarNameInTable="columnphon" msprop:Generator_UserColumnName="phon" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="type" msprop:Generator_ColumnPropNameInRow="type" msprop:Generator_ColumnPropNameInTable="typeColumn" msprop:Generator_ColumnVarNameInTable="columntype" msprop:Generator_UserColumnName="type" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
